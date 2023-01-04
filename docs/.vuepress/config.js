@@ -139,11 +139,11 @@ module.exports = {
           children: [
             {
               title: 'Contributing to the docs',
-              url: 'https://github.com/tendermint/tendermint'
+              url: 'https://github.com/HighStakesSwitzerland/tendermint'
             },
             {
               title: 'Source code on GitHub',
-              url: 'https://github.com/tendermint/tendermint'
+              url: 'https://github.com/HighStakesSwitzerland/tendermint'
             },
             {
               title: 'Careers at Tendermint',

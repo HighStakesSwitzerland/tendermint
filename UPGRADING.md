@@ -413,7 +413,7 @@ Version is now set through Go linker flags `ld_flags`. Applications that are usi
 Example:
 
 ```sh
-go install -mod=readonly -ldflags "-X github.com/HighStakesSwitzerland/tendermint/version.TMCoreSemVer=$(go list -m github.com/tendermint/tendermint | sed  's/ /\@/g') -s -w " -trimpath ./cmd
+go install -mod=readonly -ldflags "-X github.com/HighStakesSwitzerland/tendermint/version.TMCoreSemVer=$(go list -m github.com/HighStakesSwitzerland/tendermint | sed  's/ /\@/g') -s -w " -trimpath ./cmd
 ```
 
 Additionally, the exported constant `version.Version` is now `version.TMCoreSemVer`.

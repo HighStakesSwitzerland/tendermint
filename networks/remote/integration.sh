@@ -33,7 +33,7 @@ cd $GOPATH/src/github.com/tendermint
 # once go module is on, go get will download source code to
 # specific version directory under $GOPATH/pkg/mod the make
 # script will not work
-git clone https://github.com/tendermint/tendermint.git
+git clone https://github.com/HighStakesSwitzerland/tendermint.git
 cd tendermint
 ## build
 make tools

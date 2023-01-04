@@ -117,7 +117,7 @@ command will scrap all the available info and kill the process. See
 [Debugging](../tools/debugging/README.md) for the exact format.
 
 You can inspect the resulting archive yourself or create an issue on
-[Github](https://github.com/tendermint/tendermint). Before opening an issue
+[Github](https://github.com/HighStakesSwitzerland/tendermint). Before opening an issue
 however, be sure to check if there's [no existing
 issue](https://github.com/HighStakesSwitzerland/tendermint/issues) already.
 

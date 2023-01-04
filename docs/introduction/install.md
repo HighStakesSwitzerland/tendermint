@@ -29,7 +29,7 @@ echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
 Get the source code:
 
 ```sh
-git clone https://github.com/tendermint/tendermint.git
+git clone https://github.com/HighStakesSwitzerland/tendermint.git
 cd tendermint
 ```
 

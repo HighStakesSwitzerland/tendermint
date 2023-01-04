@@ -15,7 +15,7 @@ Make sure you [have Go installed](https://golang.org/doc/install).
 Next, install the `abci-cli` tool and example applications:
 
 ```sh
-git clone https://github.com/tendermint/tendermint.git
+git clone https://github.com/HighStakesSwitzerland/tendermint.git
 cd tendermint
 make install_abci
 ```

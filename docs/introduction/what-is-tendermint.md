@@ -156,7 +156,7 @@ Teaspoon).
 
 ### Intro to ABCI
 
-[Tendermint Core](https://github.com/tendermint/tendermint) (the
+[Tendermint Core](https://github.com/HighStakesSwitzerland/tendermint) (the
 "consensus engine") communicates with the application via a socket
 protocol that satisfies the ABCI.
 
