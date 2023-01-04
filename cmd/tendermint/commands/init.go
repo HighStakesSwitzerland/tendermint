@@ -7,12 +7,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/tendermint/tendermint/config"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	"github.com/tendermint/tendermint/privval"
-	"github.com/tendermint/tendermint/types"
+	cfg "github.com/HighStakesSwitzerland/tendermint/config"
+	tmos "github.com/HighStakesSwitzerland/tendermint/libs/os"
+	tmrand "github.com/HighStakesSwitzerland/tendermint/libs/rand"
+	tmtime "github.com/HighStakesSwitzerland/tendermint/libs/time"
+	"github.com/HighStakesSwitzerland/tendermint/privval"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 // InitFilesCmd initializes a fresh Tendermint Core instance.

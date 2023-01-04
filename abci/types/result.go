@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"encoding/json"
 
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/encoding"
+	tmjson "github.com/HighStakesSwitzerland/tendermint/libs/json"
 	"github.com/gogo/protobuf/jsonpb"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/encoding"
-	tmjson "github.com/tendermint/tendermint/libs/json"
 )
 
 const (

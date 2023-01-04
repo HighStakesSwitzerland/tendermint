@@ -8,17 +8,17 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/p2ptest"
-	"github.com/tendermint/tendermint/libs/log"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	protomem "github.com/tendermint/tendermint/proto/tendermint/mempool"
-	"github.com/tendermint/tendermint/types"
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	"github.com/HighStakesSwitzerland/tendermint/abci/example/kvstore"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p/p2ptest"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	tmrand "github.com/HighStakesSwitzerland/tendermint/libs/rand"
+	protomem "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/mempool"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 type reactorTestSuite struct {
@@ -181,7 +181,7 @@ func TestReactorBroadcastTxs(t *testing.T) {
 	rts.assertMempoolChannelsDrained(t)
 }
 
-// regression test for https://github.com/tendermint/tendermint/issues/5408
+// regression test for https://github.com/HighStakesSwitzerland/tendermint/issues/5408
 func TestReactorConcurrency(t *testing.T) {
 	numTxs := 5
 	numNodes := 2

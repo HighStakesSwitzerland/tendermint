@@ -1,8 +1,8 @@
 package core
 
 import (
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
+	"github.com/HighStakesSwitzerland/tendermint/rpc/coretypes"
+	rpctypes "github.com/HighStakesSwitzerland/tendermint/rpc/jsonrpc/types"
 )
 
 // UnsafeFlushMempool removes all transactions from the mempool.

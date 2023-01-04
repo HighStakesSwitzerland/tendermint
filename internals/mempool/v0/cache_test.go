@@ -7,11 +7,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/types"
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	"github.com/HighStakesSwitzerland/tendermint/abci/example/kvstore"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 func TestCacheAfterUpdate(t *testing.T) {

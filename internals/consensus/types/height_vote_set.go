@@ -6,10 +6,10 @@ import (
 	"strings"
 	"sync"
 
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	tmjson "github.com/HighStakesSwitzerland/tendermint/libs/json"
+	tmmath "github.com/HighStakesSwitzerland/tendermint/libs/math"
+	tmproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 type RoundVoteSet struct {

@@ -3,11 +3,11 @@ package v2
 import (
 	"errors"
 
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state"
+	bcproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/blocksync"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	"github.com/gogo/protobuf/proto"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/state"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	"github.com/tendermint/tendermint/types"
 )
 
 var (

@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/privval"
+	cfg "github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/privval"
 )
 
 func Test_ResetAll(t *testing.T) {

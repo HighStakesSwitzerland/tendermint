@@ -3,15 +3,15 @@ package light_test
 import (
 	"time"
 
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/ed25519"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/tmhash"
+	tmtime "github.com/HighStakesSwitzerland/tendermint/libs/time"
+	provider_mocks "github.com/HighStakesSwitzerland/tendermint/light/provider/mocks"
+	tmproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/version"
 	"github.com/stretchr/testify/mock"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	provider_mocks "github.com/tendermint/tendermint/light/provider/mocks"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
 )
 
 // privKeys is a helper type for testing.

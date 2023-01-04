@@ -3,13 +3,13 @@ package consensus
 import (
 	"context"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/libs/clist"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/internal/proxy"
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/internals/libs/clist"
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool"
+	"github.com/HighStakesSwitzerland/tendermint/internals/proxy"
+	tmstate "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/state"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 //-----------------------------------------------------------------------------

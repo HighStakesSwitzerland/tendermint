@@ -9,17 +9,17 @@ import (
 	"github.com/spf13/cobra"
 	dbm "github.com/tendermint/tm-db"
 
-	abcitypes "github.com/tendermint/tendermint/abci/types"
-	tmcfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/libs/progressbar"
-	"github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/internal/state/indexer/sink/kv"
-	"github.com/tendermint/tendermint/internal/state/indexer/sink/psql"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	"github.com/tendermint/tendermint/types"
+	abcitypes "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	tmcfg "github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/libs/progressbar"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer/sink/kv"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer/sink/psql"
+	"github.com/HighStakesSwitzerland/tendermint/internals/store"
+	"github.com/HighStakesSwitzerland/tendermint/libs/os"
+	"github.com/HighStakesSwitzerland/tendermint/rpc/coretypes"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 const (
@@ -32,9 +32,9 @@ var ReIndexEventCmd = &cobra.Command{
 	Short: "reindex events to the event store backends",
 	Long: `
 reindex-event is an offline tooling to re-index block and tx events to the eventsinks,
-you can run this command when the event store backend dropped/disconnected or you want to 
-replace the backend. The default start-height is 0, meaning the tooling will start 
-reindex from the base block height(inclusive); and the default end-height is 0, meaning 
+you can run this command when the event store backend dropped/disconnected or you want to
+replace the backend. The default start-height is 0, meaning the tooling will start
+reindex from the base block height(inclusive); and the default end-height is 0, meaning
 the tooling will reindex until the latest block height(inclusive). User can omit
 either or both arguments.
 	`,

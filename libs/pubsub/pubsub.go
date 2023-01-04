@@ -12,26 +12,25 @@
 //
 // Example:
 //
-//     q, err := query.New("account.name='John'")
-//     if err != nil {
-//         return err
-//     }
-//     ctx, cancel := context.WithTimeout(context.Background(), 1 * time.Second)
-//     defer cancel()
-//     subscription, err := pubsub.Subscribe(ctx, "johns-transactions", q)
-//     if err != nil {
-//         return err
-//     }
+//	q, err := query.New("account.name='John'")
+//	if err != nil {
+//	    return err
+//	}
+//	ctx, cancel := context.WithTimeout(context.Background(), 1 * time.Second)
+//	defer cancel()
+//	subscription, err := pubsub.Subscribe(ctx, "johns-transactions", q)
+//	if err != nil {
+//	    return err
+//	}
 //
-//     for {
-//         select {
-//         case msg <- subscription.Out():
-//             // handle msg.Data() and msg.Events()
-//         case <-subscription.Canceled():
-//             return subscription.Err()
-//         }
-//     }
-//
+//	for {
+//	    select {
+//	    case msg <- subscription.Out():
+//	        // handle msg.Data() and msg.Events()
+//	    case <-subscription.Canceled():
+//	        return subscription.Err()
+//	    }
+//	}
 package pubsub
 
 import (
@@ -39,10 +38,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/HighStakesSwitzerland/tendermint/abci/types"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub/query"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
 )
 
 type operation int

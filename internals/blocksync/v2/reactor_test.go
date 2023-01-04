@@ -13,23 +13,23 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/blocksync/v2/internal/behavior"
-	"github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/mempool/mock"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/internal/proxy"
-	sm "github.com/tendermint/tendermint/internal/state"
-	sf "github.com/tendermint/tendermint/internal/state/test/factory"
-	tmstore "github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	"github.com/tendermint/tendermint/types"
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/blocksync/v2/internal/behavior"
+	"github.com/HighStakesSwitzerland/tendermint/internals/consensus"
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool/mock"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p/conn"
+	"github.com/HighStakesSwitzerland/tendermint/internals/proxy"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	sf "github.com/HighStakesSwitzerland/tendermint/internals/state/test/factory"
+	tmstore "github.com/HighStakesSwitzerland/tendermint/internals/store"
+	"github.com/HighStakesSwitzerland/tendermint/internals/test/factory"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	bcproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/blocksync"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 type mockPeer struct {
@@ -185,7 +185,7 @@ func newTestReactor(t *testing.T, p testReactorParams) *BlockchainReactor {
 }
 
 // This test is left here and not deleted to retain the termination cases for
-// future improvement in [#4482](https://github.com/tendermint/tendermint/issues/4482).
+// future improvement in [#4482](https://github.com/HighStakesSwitzerland/tendermint/issues/4482).
 // func TestReactorTerminationScenarios(t *testing.T) {
 
 //	config := cfg.ResetTestRoot("blockchain_reactor_v2_test")

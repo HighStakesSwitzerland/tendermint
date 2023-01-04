@@ -10,13 +10,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/internal/p2p/conn"
-	"github.com/tendermint/tendermint/libs/cmap"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p/conn"
+	"github.com/HighStakesSwitzerland/tendermint/libs/cmap"
+	tmrand "github.com/HighStakesSwitzerland/tendermint/libs/rand"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 const (
@@ -415,7 +415,7 @@ func (sw *Switch) stopAndRemovePeer(peer Peer, reason interface{}) {
 	// Removing a peer should go last to avoid a situation where a peer
 	// reconnect to our node and the switch calls InitPeer before
 	// RemovePeer is finished.
-	// https://github.com/tendermint/tendermint/issues/3338
+	// https://github.com/HighStakesSwitzerland/tendermint/issues/3338
 	if sw.peers.Remove(peer) {
 		sw.metrics.Peers.Add(-1)
 	}
@@ -429,8 +429,8 @@ func (sw *Switch) stopAndRemovePeer(peer Peer, reason interface{}) {
 // to the PEX/Addrbook to find the peer with the addr again
 // NOTE: this will keep trying even if the handshake or auth fails.
 // TODO: be more explicit with error types so we only retry on certain failures
-//  - ie. if we're getting ErrDuplicatePeer we can stop
-//  	because the addrbook got us the peer back already
+//   - ie. if we're getting ErrDuplicatePeer we can stop
+//     because the addrbook got us the peer back already
 func (sw *Switch) reconnectToPeer(addr *NetAddress) {
 	if _, exists := sw.reconnecting.GetOrSet(string(addr.ID), addr); exists {
 		return

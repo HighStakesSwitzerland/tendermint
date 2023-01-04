@@ -11,12 +11,12 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/light"
-	"github.com/tendermint/tendermint/light/provider"
-	provider_mocks "github.com/tendermint/tendermint/light/provider/mocks"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/light"
+	"github.com/HighStakesSwitzerland/tendermint/light/provider"
+	provider_mocks "github.com/HighStakesSwitzerland/tendermint/light/provider/mocks"
+	dbs "github.com/HighStakesSwitzerland/tendermint/light/store/db"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 func TestLightClientAttackEvidence_Lunatic(t *testing.T) {
@@ -433,7 +433,7 @@ func TestClientDivergentTraces2(t *testing.T) {
 
 // 3. witness has the same first header, but different second header
 // => creation should succeed, but the verification should fail
-//nolint: dupl
+// nolint: dupl
 func TestClientDivergentTraces3(t *testing.T) {
 	//
 	primaryHeaders, primaryVals, _ := genLightBlocksWithKeys(chainID, 2, 5, 2, bTime)
@@ -471,7 +471,7 @@ func TestClientDivergentTraces3(t *testing.T) {
 
 // 4. Witness has a divergent header but can not produce a valid trace to back it up.
 // It should be ignored
-//nolint: dupl
+// nolint: dupl
 func TestClientDivergentTraces4(t *testing.T) {
 	//
 	primaryHeaders, primaryVals, _ := genLightBlocksWithKeys(chainID, 2, 5, 2, bTime)

@@ -1,4 +1,4 @@
-// Temporarily disabled pending ttps://github.com/tendermint/tendermint/issues/7626.
+// Temporarily disabled pending ttps://github.com/HighStakesSwitzerland/tendermint/issues/7626.
 //go:build issue7626
 // +build issue7626
 
@@ -13,13 +13,13 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/p2ptest"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
-	"github.com/tendermint/tendermint/libs/log"
-	p2pproto "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/ed25519"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p/p2ptest"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p/pex"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	p2pproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 const (

@@ -7,16 +7,16 @@ import (
 	"fmt"
 	"time"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/proxy"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/light"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/internals/proxy"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/light"
+	ssproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/statesync"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 const (

@@ -10,15 +10,15 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/privval"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/tmhash"
+	"github.com/HighStakesSwitzerland/tendermint/internals/test/factory"
+	tmjson "github.com/HighStakesSwitzerland/tendermint/libs/json"
+	"github.com/HighStakesSwitzerland/tendermint/privval"
+	tmproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/types"
+	e2e "github.com/HighStakesSwitzerland/tendermint/test/e2e/pkg"
+	"github.com/HighStakesSwitzerland/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/version"
 )
 
 // 1 in 4 evidence is light client evidence, the rest is duplicate vote evidence

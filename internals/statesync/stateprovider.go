@@ -11,19 +11,19 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/p2p"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/light"
-	lightprovider "github.com/tendermint/tendermint/light/provider"
-	lighthttp "github.com/tendermint/tendermint/light/provider/http"
-	lightrpc "github.com/tendermint/tendermint/light/rpc"
-	lightdb "github.com/tendermint/tendermint/light/store/db"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
-	rpchttp "github.com/tendermint/tendermint/rpc/client/http"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/light"
+	lightprovider "github.com/HighStakesSwitzerland/tendermint/light/provider"
+	lighthttp "github.com/HighStakesSwitzerland/tendermint/light/provider/http"
+	lightrpc "github.com/HighStakesSwitzerland/tendermint/light/rpc"
+	lightdb "github.com/HighStakesSwitzerland/tendermint/light/store/db"
+	ssproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/statesync"
+	rpchttp "github.com/HighStakesSwitzerland/tendermint/rpc/client/http"
+	"github.com/HighStakesSwitzerland/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/version"
 )
 
 //go:generate ../../scripts/mockery_generate.sh StateProvider

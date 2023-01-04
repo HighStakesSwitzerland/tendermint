@@ -40,7 +40,7 @@ max-tx-bytes = 1048576
 
 # Maximum size of a batch of transactions to send to a peer
 # Including space needed by encoding (one varint per transaction).
-# XXX: Unused due to https://github.com/tendermint/tendermint/issues/5796
+# XXX: Unused due to https://github.com/HighStakesSwitzerland/tendermint/issues/5796
 max-batch-bytes = 0
 ```
 
@@ -92,7 +92,7 @@ Cache size determines the size of the cache holding transactions we have already
 
 ## Keep Invalid Transactions In Cache
 
-Keep invalid transactions in cache determines wether a transaction in the cache, which is invalid, should be evicted. An invalid transaction here may mean that the transaction may rely on a different tx that has not been included in a block. 
+Keep invalid transactions in cache determines wether a transaction in the cache, which is invalid, should be evicted. An invalid transaction here may mean that the transaction may rely on a different tx that has not been included in a block.
 
 ## Max Transaction Bytes
 
@@ -102,4 +102,4 @@ Max transaction bytes defines the max size a transaction can be for your node. I
 
 Max batch bytes defines the amount of bytes the node will send to a peer. Default is 0.
 
-> Note: Unused due to https://github.com/tendermint/tendermint/issues/5796
+> Note: Unused due to https://github.com/HighStakesSwitzerland/tendermint/issues/5796

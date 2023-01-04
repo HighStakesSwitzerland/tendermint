@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cfg "github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/state"
+	cfg "github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state"
 )
 
 var RollbackStateCmd = &cobra.Command{

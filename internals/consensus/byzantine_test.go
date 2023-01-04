@@ -12,19 +12,19 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/evidence"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	mempoolv0 "github.com/tendermint/tendermint/internal/mempool/v0"
-	"github.com/tendermint/tendermint/internal/p2p"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/internals/evidence"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	mempoolv0 "github.com/HighStakesSwitzerland/tendermint/internals/mempool/v0"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	"github.com/HighStakesSwitzerland/tendermint/internals/store"
+	"github.com/HighStakesSwitzerland/tendermint/internals/test/factory"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	tmcons "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/consensus"
+	tmproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 // Byzantine node sends two different prevotes (nil and blockID) to the same
@@ -281,7 +281,7 @@ func TestByzantinePrevoteEquivocation(t *testing.T) {
 // B sees a commit, A doesn't.
 // Heal partition and ensure A sees the commit
 func TestByzantineConflictingProposalsWithPartition(t *testing.T) {
-	// TODO: https://github.com/tendermint/tendermint/issues/6092
+	// TODO: https://github.com/HighStakesSwitzerland/tendermint/issues/6092
 	t.SkipNow()
 
 	// n := 4

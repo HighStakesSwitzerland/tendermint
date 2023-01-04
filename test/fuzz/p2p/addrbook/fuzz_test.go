@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/HighStakesSwitzerland/tendermint/test/fuzz/p2p/addrbook"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/test/fuzz/p2p/addrbook"
 )
 
 const testdataCasesDir = "testdata/cases"

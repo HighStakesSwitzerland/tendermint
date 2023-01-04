@@ -3,12 +3,12 @@ package v1
 import (
 	"context"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/mempool"
-	mempoolv1 "github.com/tendermint/tendermint/internal/mempool/v1"
-	"github.com/tendermint/tendermint/libs/log"
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	"github.com/HighStakesSwitzerland/tendermint/abci/example/kvstore"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool"
+	mempoolv1 "github.com/HighStakesSwitzerland/tendermint/internals/mempool/v1"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
 )
 
 var mp mempool.Mempool

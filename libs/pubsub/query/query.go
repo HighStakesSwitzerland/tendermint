@@ -4,12 +4,11 @@
 // Query expressions describe properties of events and their attributes, using
 // strings like:
 //
-//    abci.invoice.number = 22 AND abci.invoice.owner = 'Ivan'
+//	abci.invoice.number = 22 AND abci.invoice.owner = 'Ivan'
 //
 // Query expressions can handle attribute values encoding numbers, strings,
 // dates, and timestamps.  The complete query grammar is described in the
 // query/syntax package.
-//
 package query
 
 import (
@@ -19,8 +18,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub/query/syntax"
+	"github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub/query/syntax"
 )
 
 // All is a query that matches all events.
@@ -212,6 +211,7 @@ func parseNumber(s string) (float64, error) {
 // An entry does not exist if the combination is not valid.
 //
 // Disable the dupl lint for this map. The result isn't even correct.
+//
 //nolint:dupl
 var opTypeMap = map[syntax.Token]map[syntax.Token]func(interface{}) func(string) bool{
 	syntax.TContains: {

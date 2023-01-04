@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/internals/test/factory"
+	ssproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/statesync"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 func TestDispatcherBasic(t *testing.T) {

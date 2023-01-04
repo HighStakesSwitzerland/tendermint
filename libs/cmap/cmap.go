@@ -1,7 +1,7 @@
 package cmap
 
 import (
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
 )
 
 // CMap is a goroutine-safe map

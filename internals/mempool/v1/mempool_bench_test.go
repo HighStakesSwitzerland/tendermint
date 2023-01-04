@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/internal/mempool"
 )
 
 func BenchmarkTxMempool_CheckTx(b *testing.B) {

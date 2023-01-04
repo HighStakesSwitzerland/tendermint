@@ -7,15 +7,15 @@ import (
 
 	"github.com/rs/cors"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/rpc/core"
-	"github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/consensus"
+	"github.com/HighStakesSwitzerland/tendermint/internals/rpc/core"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub"
+	"github.com/HighStakesSwitzerland/tendermint/rpc/jsonrpc/server"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 // Server defines parameters for running an Inspector rpc server.
@@ -133,7 +133,7 @@ func serverRPCConfig(r *config.RPCConfig) *server.Config {
 	cfg.MaxHeaderBytes = r.MaxHeaderBytes
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/HighStakesSwitzerland/tendermint/issues/3435
 	if cfg.WriteTimeout <= r.TimeoutBroadcastTxCommit {
 		cfg.WriteTimeout = r.TimeoutBroadcastTxCommit + 1*time.Second
 	}

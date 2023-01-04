@@ -4,10 +4,10 @@ import (
 	"context"
 	"io"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/service"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
-	"github.com/tendermint/tendermint/types"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	privvalproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/privval"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 // ValidationRequestHandlerFunc handles different remoteSigner requests

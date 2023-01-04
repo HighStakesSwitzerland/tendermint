@@ -9,34 +9,34 @@ import (
 	"strconv"
 	"time"
 
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/internals/consensus"
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p/pex"
+	"github.com/HighStakesSwitzerland/tendermint/internals/proxy"
+	rpccore "github.com/HighStakesSwitzerland/tendermint/internals/rpc/core"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer"
+	"github.com/HighStakesSwitzerland/tendermint/internals/statesync"
+	"github.com/HighStakesSwitzerland/tendermint/internals/store"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	tmnet "github.com/HighStakesSwitzerland/tendermint/libs/net"
+	tmpubsub "github.com/HighStakesSwitzerland/tendermint/libs/pubsub"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	"github.com/HighStakesSwitzerland/tendermint/libs/strings"
+	tmtime "github.com/HighStakesSwitzerland/tendermint/libs/time"
+	"github.com/HighStakesSwitzerland/tendermint/privval"
+	tmgrpc "github.com/HighStakesSwitzerland/tendermint/privval/grpc"
+	grpccore "github.com/HighStakesSwitzerland/tendermint/rpc/grpc"
+	rpcserver "github.com/HighStakesSwitzerland/tendermint/rpc/jsonrpc/server"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/rs/cors"
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
-	"github.com/tendermint/tendermint/internal/proxy"
-	rpccore "github.com/tendermint/tendermint/internal/rpc/core"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/internal/statesync"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	tmpubsub "github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/libs/service"
-	"github.com/tendermint/tendermint/libs/strings"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	"github.com/tendermint/tendermint/privval"
-	tmgrpc "github.com/tendermint/tendermint/privval/grpc"
-	grpccore "github.com/tendermint/tendermint/rpc/grpc"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	"github.com/tendermint/tendermint/types"
 
 	_ "net/http/pprof" // nolint: gosec // securely exposed on separate, optional port
 
@@ -345,7 +345,7 @@ func makeNode(cfg *config.Config,
 	// Set up state sync reactor, and schedule a sync if requested.
 	// FIXME The way we do phased startups (e.g. replay -> block sync -> consensus) is very messy,
 	// we should clean this whole thing up. See:
-	// https://github.com/tendermint/tendermint/issues/4644
+	// https://github.com/HighStakesSwitzerland/tendermint/issues/4644
 	var (
 		stateSyncReactor     *statesync.Reactor
 		stateSyncReactorShim *p2p.ReactorShim
@@ -931,7 +931,7 @@ func (n *nodeImpl) startRPC() ([]net.Listener, error) {
 	cfg.MaxOpenConnections = n.config.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/HighStakesSwitzerland/tendermint/issues/3435
 	if cfg.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 		cfg.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}
@@ -1011,7 +1011,7 @@ func (n *nodeImpl) startRPC() ([]net.Listener, error) {
 		cfg.MaxOpenConnections = n.config.RPC.GRPCMaxOpenConnections
 		// If necessary adjust global WriteTimeout to ensure it's greater than
 		// TimeoutBroadcastTxCommit.
-		// See https://github.com/tendermint/tendermint/issues/3435
+		// See https://github.com/HighStakesSwitzerland/tendermint/issues/3435
 		if cfg.WriteTimeout <= n.config.RPC.TimeoutBroadcastTxCommit {
 			cfg.WriteTimeout = n.config.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 		}

@@ -6,11 +6,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/libs/service"
-	coregrpc "github.com/tendermint/tendermint/rpc/grpc"
-	rpctest "github.com/tendermint/tendermint/rpc/test"
+	"github.com/HighStakesSwitzerland/tendermint/abci/example/kvstore"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	coregrpc "github.com/HighStakesSwitzerland/tendermint/rpc/grpc"
+	rpctest "github.com/HighStakesSwitzerland/tendermint/rpc/test"
 )
 
 func NodeSuite(t *testing.T) (service.Service, *config.Config) {

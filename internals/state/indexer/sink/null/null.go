@@ -3,10 +3,10 @@ package null
 import (
 	"context"
 
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub/query"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 var _ indexer.EventSink = (*EventSink)(nil)

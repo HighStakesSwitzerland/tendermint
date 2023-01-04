@@ -3,12 +3,12 @@ package encoding
 import (
 	"fmt"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/crypto/secp256k1"
-	"github.com/tendermint/tendermint/crypto/sr25519"
-	"github.com/tendermint/tendermint/libs/json"
-	cryptoproto "github.com/tendermint/tendermint/proto/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/ed25519"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/secp256k1"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/sr25519"
+	"github.com/HighStakesSwitzerland/tendermint/libs/json"
+	cryptoproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/crypto"
 )
 
 func init() {

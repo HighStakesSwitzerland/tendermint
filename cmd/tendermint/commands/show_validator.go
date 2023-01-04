@@ -6,12 +6,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tendermint/tendermint/crypto"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	tmos "github.com/tendermint/tendermint/libs/os"
-	"github.com/tendermint/tendermint/privval"
-	tmgrpc "github.com/tendermint/tendermint/privval/grpc"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	tmjson "github.com/HighStakesSwitzerland/tendermint/libs/json"
+	tmnet "github.com/HighStakesSwitzerland/tendermint/libs/net"
+	tmos "github.com/HighStakesSwitzerland/tendermint/libs/os"
+	"github.com/HighStakesSwitzerland/tendermint/privval"
+	tmgrpc "github.com/HighStakesSwitzerland/tendermint/privval/grpc"
 )
 
 // ShowValidatorCmd adds capabilities for showing the validator info.

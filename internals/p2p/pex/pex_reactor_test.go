@@ -13,12 +13,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/mock"
-	"github.com/tendermint/tendermint/libs/log"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p/mock"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	tmp2p "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 var (
@@ -58,15 +58,15 @@ func TestPEXReactorAddRemovePeer(t *testing.T) {
 }
 
 // --- FAIL: TestPEXReactorRunning (11.10s)
-// 				pex_reactor_test.go:411: expected all switches to be connected to at
-// 				least one peer (switches: 0 => {outbound: 1, inbound: 0}, 1 =>
-// 				{outbound: 0, inbound: 1}, 2 => {outbound: 0, inbound: 0}, )
+//
+//	pex_reactor_test.go:411: expected all switches to be connected to at
+//	least one peer (switches: 0 => {outbound: 1, inbound: 0}, 1 =>
+//	{outbound: 0, inbound: 1}, 2 => {outbound: 0, inbound: 0}, )
 //
 // EXPLANATION: peers are getting rejected because in switch#addPeer we check
 // if any peer (who we already connected to) has the same IP. Even though local
 // peers have different IP addresses, they all have the same underlying remote
 // IP: 127.0.0.1.
-//
 func TestPEXReactorRunning(t *testing.T) {
 	N := 3
 	switches := make([]*p2p.Switch, N)
@@ -375,7 +375,7 @@ func TestPEXReactorDialsPeerUpToMaxAttemptsInSeedMode(t *testing.T) {
 // this should give it time to request addrs and for the seed
 // to call FlushStop, and allows us to test calling Stop concurrently
 // with FlushStop. Before a fix, this non-deterministically reproduced
-// https://github.com/tendermint/tendermint/issues/3231.
+// https://github.com/HighStakesSwitzerland/tendermint/issues/3231.
 func TestPEXReactorSeedModeFlushStop(t *testing.T) {
 	t.Skip("flaky test, will be replaced by new P2P stack")
 	N := 2
@@ -669,8 +669,8 @@ func TestPexVectors(t *testing.T) {
 // reactor test cases.
 //
 // References:
-// https://github.com/tendermint/tendermint/pull/5733
-// https://github.com/tendermint/tendermint/issues/5732
+// https://github.com/HighStakesSwitzerland/tendermint/pull/5733
+// https://github.com/HighStakesSwitzerland/tendermint/issues/5732
 func tempDir(t *testing.T) string {
 	t.Helper()
 	dir, err := ioutil.TempDir("", "")

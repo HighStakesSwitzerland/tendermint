@@ -10,10 +10,10 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/libs/service"
+	"github.com/HighStakesSwitzerland/tendermint/abci/types"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	tmnet "github.com/HighStakesSwitzerland/tendermint/libs/net"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
 )
 
 // A gRPC client.

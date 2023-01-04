@@ -17,16 +17,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/merkle"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	"github.com/tendermint/tendermint/libs/bits"
-	"github.com/tendermint/tendermint/libs/bytes"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	tmversion "github.com/tendermint/tendermint/proto/tendermint/version"
-	"github.com/tendermint/tendermint/version"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/merkle"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/tmhash"
+	"github.com/HighStakesSwitzerland/tendermint/libs/bits"
+	"github.com/HighStakesSwitzerland/tendermint/libs/bytes"
+	tmrand "github.com/HighStakesSwitzerland/tendermint/libs/rand"
+	tmtime "github.com/HighStakesSwitzerland/tendermint/libs/time"
+	tmproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/types"
+	tmversion "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/version"
+	"github.com/HighStakesSwitzerland/tendermint/version"
 )
 
 func TestMain(m *testing.M) {
@@ -213,7 +213,7 @@ func makeBlockID(hash []byte, partSetSize uint32, partSetHash []byte) BlockID {
 
 var nilBytes []byte
 
-// This follows RFC-6962, i.e. `echo -n '' | sha256sum`
+// This follows RFC-6962, i.e. `echo -n ” | sha256sum`
 var emptyBytes = []byte{0xe3, 0xb0, 0xc4, 0x42, 0x98, 0xfc, 0x1c, 0x14, 0x9a, 0xfb, 0xf4, 0xc8,
 	0x99, 0x6f, 0xb9, 0x24, 0x27, 0xae, 0x41, 0xe4, 0x64, 0x9b, 0x93, 0x4c, 0xa4, 0x95, 0x99, 0x1b,
 	0x78, 0x52, 0xb8, 0x55}

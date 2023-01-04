@@ -3,7 +3,7 @@ package pex
 import (
 	"testing"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 func BenchmarkAddrBook_hash(b *testing.B) {

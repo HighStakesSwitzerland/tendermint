@@ -9,12 +9,12 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/tmhash"
+	"github.com/HighStakesSwitzerland/tendermint/internals/test/factory"
+	tmrand "github.com/HighStakesSwitzerland/tendermint/libs/rand"
+	"github.com/HighStakesSwitzerland/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/version"
 )
 
 func TestLast_FirstLightBlockHeight(t *testing.T) {

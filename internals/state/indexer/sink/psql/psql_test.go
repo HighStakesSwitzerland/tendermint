@@ -12,15 +12,15 @@ import (
 	"testing"
 	"time"
 
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	"github.com/adlio/schema"
 	"github.com/gogo/protobuf/proto"
 	"github.com/ory/dockertest"
 	"github.com/ory/dockertest/docker"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/types"
 
 	// Register the Postgres database driver.
 	_ "github.com/lib/pq"

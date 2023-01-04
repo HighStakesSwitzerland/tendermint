@@ -6,15 +6,15 @@ import (
 	"fmt"
 	"time"
 
-	rpccore "github.com/tendermint/tendermint/internal/rpc/core"
-	"github.com/tendermint/tendermint/libs/bytes"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	rpctypes "github.com/tendermint/tendermint/rpc/jsonrpc/types"
-	"github.com/tendermint/tendermint/types"
+	rpccore "github.com/HighStakesSwitzerland/tendermint/internals/rpc/core"
+	"github.com/HighStakesSwitzerland/tendermint/libs/bytes"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub/query"
+	rpcclient "github.com/HighStakesSwitzerland/tendermint/rpc/client"
+	"github.com/HighStakesSwitzerland/tendermint/rpc/coretypes"
+	rpctypes "github.com/HighStakesSwitzerland/tendermint/rpc/jsonrpc/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 /*

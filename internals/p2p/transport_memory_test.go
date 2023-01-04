@@ -5,10 +5,10 @@ import (
 	"encoding/hex"
 	"testing"
 
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/types"
 )
 
 // Transports are mainly tested by common tests in transport_test.go, we

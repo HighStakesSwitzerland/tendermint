@@ -11,16 +11,16 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/internal/evidence"
-	"github.com/tendermint/tendermint/internal/evidence/mocks"
-	sm "github.com/tendermint/tendermint/internal/state"
-	smmocks "github.com/tendermint/tendermint/internal/state/mocks"
-	sf "github.com/tendermint/tendermint/internal/state/test/factory"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	"github.com/HighStakesSwitzerland/tendermint/internals/evidence"
+	"github.com/HighStakesSwitzerland/tendermint/internals/evidence/mocks"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	smmocks "github.com/HighStakesSwitzerland/tendermint/internals/state/mocks"
+	sf "github.com/HighStakesSwitzerland/tendermint/internals/state/test/factory"
+	"github.com/HighStakesSwitzerland/tendermint/internals/store"
+	"github.com/HighStakesSwitzerland/tendermint/internals/test/factory"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/version"
 )
 
 const evidenceChainID = "test_chain"

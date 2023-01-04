@@ -7,15 +7,15 @@ import (
 	"runtime/debug"
 	"sync"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/libs/clist"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/mempool"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	protomem "github.com/tendermint/tendermint/proto/tendermint/mempool"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/libs/clist"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	protomem "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/mempool"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 var (
@@ -72,9 +72,8 @@ func NewReactor(
 // object wraps a reference to a legacy p2p ChannelDescriptor and the corresponding
 // p2p proto.Message the new p2p Channel is responsible for handling.
 //
-//
 // TODO: Remove once p2p refactor is complete.
-// ref: https://github.com/tendermint/tendermint/issues/5670
+// ref: https://github.com/HighStakesSwitzerland/tendermint/issues/5670
 func GetChannelShims(cfg *config.MempoolConfig) map[p2p.ChannelID]*p2p.ChannelDescriptorShim {
 	largestTx := make([]byte, cfg.MaxTxBytes)
 	batchMsg := protomem.Message{
@@ -350,7 +349,7 @@ func (r *Reactor) broadcastTxRoutine(peerID types.NodeID, closer *tmsync.Closer)
 		memTx := next.Value.(*mempoolTx)
 
 		// NOTE: Transaction batching was disabled due to:
-		// https://github.com/tendermint/tendermint/issues/5796
+		// https://github.com/HighStakesSwitzerland/tendermint/issues/5796
 
 		if _, ok := memTx.senders.Load(peerMempoolID); !ok {
 			// Send the mempool tx to the corresponding peer. Note, the peer may be

@@ -10,16 +10,16 @@ import (
 	"github.com/stretchr/testify/require"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	"github.com/tendermint/tendermint/internal/evidence"
-	"github.com/tendermint/tendermint/internal/evidence/mocks"
-	sm "github.com/tendermint/tendermint/internal/state"
-	smmocks "github.com/tendermint/tendermint/internal/state/mocks"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	"github.com/tendermint/tendermint/libs/log"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/tmhash"
+	"github.com/HighStakesSwitzerland/tendermint/internals/evidence"
+	"github.com/HighStakesSwitzerland/tendermint/internals/evidence/mocks"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	smmocks "github.com/HighStakesSwitzerland/tendermint/internals/state/mocks"
+	"github.com/HighStakesSwitzerland/tendermint/internals/test/factory"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	tmproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 const (

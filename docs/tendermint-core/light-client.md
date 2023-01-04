@@ -9,7 +9,7 @@ applications. Tendermint provides unique speed and security properties for
 light client applications.
 
 See our [light
-package](https://pkg.go.dev/github.com/tendermint/tendermint/light?tab=doc).
+package](https://pkg.go.dev/github.com/HighStakesSwitzerland/tendermint/light?tab=doc).
 
 ## Overview
 
@@ -33,12 +33,12 @@ target height. From there, all the application state is verifiable with
 
 ## Security
 
-A light client is initialized from a point of trust using [Trust Options](https://pkg.go.dev/github.com/tendermint/tendermint/light?tab=doc#TrustOptions),
+A light client is initialized from a point of trust using [Trust Options](https://pkg.go.dev/github.com/HighStakesSwitzerland/tendermint/light?tab=doc#TrustOptions),
 a provider and a set of witnesses. This sets the trust period: the period that
 full nodes should be accountable for faulty behavior and a trust level: the
 fraction of validators in a validator set with which we trust that at least one
 is correct. As Tendermint consensus can withstand 1/3 byzantine faults, this is
-the default trust level, however, for greater security you can increase it (max:  
+the default trust level, however, for greater security you can increase it (max:
 1).
 
 Similar to a full node, light clients can also be subject to byzantine attacks.

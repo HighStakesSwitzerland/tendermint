@@ -4,15 +4,15 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	p2pmocks "github.com/HighStakesSwitzerland/tendermint/internals/p2p/mocks"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	ssproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/statesync"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/p2p"
-	p2pmocks "github.com/tendermint/tendermint/internal/p2p/mocks"
-	"github.com/tendermint/tendermint/libs/log"
-	ssproto "github.com/tendermint/tendermint/proto/tendermint/statesync"
-	"github.com/tendermint/tendermint/types"
 )
 
 var (

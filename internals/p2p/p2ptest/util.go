@@ -1,8 +1,8 @@
 package p2ptest
 
 import (
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	gogotypes "github.com/gogo/protobuf/types"
-	"github.com/tendermint/tendermint/types"
 )
 
 // Message is a simple message containing a string-typed Value field.

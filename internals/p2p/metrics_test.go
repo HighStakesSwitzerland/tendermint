@@ -3,8 +3,8 @@ package p2p
 import (
 	"testing"
 
+	"github.com/HighStakesSwitzerland/tendermint/proto/tendermint/p2p"
 	"github.com/stretchr/testify/assert"
-	"github.com/tendermint/tendermint/proto/tendermint/p2p"
 )
 
 func TestValueToMetricsLabel(t *testing.T) {

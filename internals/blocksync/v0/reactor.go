@@ -6,16 +6,16 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tendermint/tendermint/internal/blocksync"
-	"github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/p2p"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmsync "github.com/tendermint/tendermint/libs/sync"
-	bcproto "github.com/tendermint/tendermint/proto/tendermint/blocksync"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/internals/blocksync"
+	"github.com/HighStakesSwitzerland/tendermint/internals/consensus"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	"github.com/HighStakesSwitzerland/tendermint/internals/store"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/libs/sync"
+	bcproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/blocksync"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 var (
@@ -27,7 +27,7 @@ var (
 	//
 	//
 	// TODO: Remove once p2p refactor is complete.
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/HighStakesSwitzerland/tendermint/issues/5670
 	ChannelShims = map[p2p.ChannelID]*p2p.ChannelDescriptorShim{
 		BlockSyncChannel: {
 			MsgType: new(bcproto.Message),

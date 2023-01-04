@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
+	tmtime "github.com/HighStakesSwitzerland/tendermint/libs/time"
 	"github.com/stretchr/testify/assert"
-	tmtime "github.com/tendermint/tendermint/libs/time"
 )
 
 func TestWeightedMedian(t *testing.T) {

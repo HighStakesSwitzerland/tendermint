@@ -14,24 +14,24 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/server"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/libs/log"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/light"
-	lproxy "github.com/tendermint/tendermint/light/proxy"
-	lrpc "github.com/tendermint/tendermint/light/rpc"
-	dbs "github.com/tendermint/tendermint/light/store/db"
-	"github.com/tendermint/tendermint/node"
-	"github.com/tendermint/tendermint/privval"
-	grpcprivval "github.com/tendermint/tendermint/privval/grpc"
-	privvalproto "github.com/tendermint/tendermint/proto/tendermint/privval"
-	rpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
-	"github.com/tendermint/tendermint/test/e2e/app"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	"github.com/HighStakesSwitzerland/tendermint/abci/server"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/ed25519"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	tmnet "github.com/HighStakesSwitzerland/tendermint/libs/net"
+	"github.com/HighStakesSwitzerland/tendermint/light"
+	lproxy "github.com/HighStakesSwitzerland/tendermint/light/proxy"
+	lrpc "github.com/HighStakesSwitzerland/tendermint/light/rpc"
+	dbs "github.com/HighStakesSwitzerland/tendermint/light/store/db"
+	"github.com/HighStakesSwitzerland/tendermint/node"
+	"github.com/HighStakesSwitzerland/tendermint/privval"
+	grpcprivval "github.com/HighStakesSwitzerland/tendermint/privval/grpc"
+	privvalproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/privval"
+	rpcserver "github.com/HighStakesSwitzerland/tendermint/rpc/jsonrpc/server"
+	"github.com/HighStakesSwitzerland/tendermint/test/e2e/app"
+	e2e "github.com/HighStakesSwitzerland/tendermint/test/e2e/pkg"
 )
 
 var logger = log.MustNewDefaultLogger(log.LogFormatPlain, log.LogLevelInfo, false)
@@ -192,7 +192,7 @@ func startLightNode(cfg *Config) error {
 	rpccfg.MaxOpenConnections = tmcfg.RPC.MaxOpenConnections
 	// If necessary adjust global WriteTimeout to ensure it's greater than
 	// TimeoutBroadcastTxCommit.
-	// See https://github.com/tendermint/tendermint/issues/3435
+	// See https://github.com/HighStakesSwitzerland/tendermint/issues/3435
 	if rpccfg.WriteTimeout <= tmcfg.RPC.TimeoutBroadcastTxCommit {
 		rpccfg.WriteTimeout = tmcfg.RPC.TimeoutBroadcastTxCommit + 1*time.Second
 	}

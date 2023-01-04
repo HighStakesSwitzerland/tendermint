@@ -6,23 +6,23 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/libs/pubsub"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/libs/pubsub/query/syntax"
+	"github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub/query"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub/query/syntax"
 )
 
 var _ pubsub.Query = (*query.Query)(nil)
 
 // Example events from the OpenAPI documentation:
-//  https://github.com/tendermint/tendermint/blob/master/rpc/openapi/openapi.yaml
+//
+//	https://github.com/HighStakesSwitzerland/tendermint/blob/master/rpc/openapi/openapi.yaml
 //
 // Redactions:
 //
 //   - Add an explicit "tm" event for the built-in attributes.
 //   - Remove Index fields (not relevant to tests).
 //   - Add explicit balance values (to use in tests).
-//
 var apiEvents = []types.Event{
 	{
 		Type: "tm",

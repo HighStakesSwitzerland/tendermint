@@ -6,10 +6,10 @@ import (
 	"sync/atomic"
 	"testing"
 
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	"github.com/HighStakesSwitzerland/tendermint/abci/example/kvstore"
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool"
 	"github.com/stretchr/testify/require"
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/internal/mempool"
 )
 
 func BenchmarkReap(b *testing.B) {

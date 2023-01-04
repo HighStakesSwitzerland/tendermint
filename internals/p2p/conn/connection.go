@@ -15,14 +15,14 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	flow "github.com/tendermint/tendermint/internal/libs/flowrate"
-	"github.com/tendermint/tendermint/internal/libs/protoio"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/internal/libs/timer"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/libs/service"
-	tmp2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
+	flow "github.com/HighStakesSwitzerland/tendermint/internals/libs/flowrate"
+	"github.com/HighStakesSwitzerland/tendermint/internals/libs/protoio"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/internals/libs/timer"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	tmmath "github.com/HighStakesSwitzerland/tendermint/libs/math"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	tmp2p "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/p2p"
 )
 
 const (
@@ -64,6 +64,7 @@ The byte id and the relative priorities of each `Channel` are configured upon
 initialization of the connection.
 
 There are two methods for sending messages:
+
 	func (m MConnection) Send(chID byte, msgBytes []byte) bool {}
 	func (m MConnection) TrySend(chID byte, msgBytes []byte}) bool {}
 
@@ -630,7 +631,7 @@ FOR_LOOP:
 		switch pkt := packet.Sum.(type) {
 		case *tmp2p.Packet_PacketPing:
 			// TODO: prevent abuse, as they cause flush()'s.
-			// https://github.com/tendermint/tendermint/issues/1190
+			// https://github.com/HighStakesSwitzerland/tendermint/issues/1190
 			c.Logger.Debug("Receive Ping")
 			select {
 			case c.pong <- struct{}{}:
@@ -764,7 +765,7 @@ type Channel struct {
 	// Exponential moving average.
 	// This field must be accessed atomically.
 	// It is first in the struct to ensure correct alignment.
-	// See https://github.com/tendermint/tendermint/issues/7000.
+	// See https://github.com/HighStakesSwitzerland/tendermint/issues/7000.
 	recentlySent int64
 
 	conn          *MConnection

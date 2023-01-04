@@ -12,30 +12,30 @@ import (
 
 	dbm "github.com/tendermint/tm-db"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	abci "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto"
-	bcv0 "github.com/tendermint/tendermint/internal/blocksync/v0"
-	"github.com/tendermint/tendermint/internal/consensus"
-	"github.com/tendermint/tendermint/internal/evidence"
-	"github.com/tendermint/tendermint/internal/mempool"
-	mempoolv0 "github.com/tendermint/tendermint/internal/mempool/v0"
-	mempoolv1 "github.com/tendermint/tendermint/internal/mempool/v1"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/internal/p2p/pex"
-	"github.com/tendermint/tendermint/internal/proxy"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	"github.com/tendermint/tendermint/internal/state/indexer/sink"
-	"github.com/tendermint/tendermint/internal/statesync"
-	"github.com/tendermint/tendermint/internal/store"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmstrings "github.com/tendermint/tendermint/libs/strings"
-	protop2p "github.com/tendermint/tendermint/proto/tendermint/p2p"
-	"github.com/tendermint/tendermint/types"
-	"github.com/tendermint/tendermint/version"
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	bcv0 "github.com/HighStakesSwitzerland/tendermint/internals/blocksync/v0"
+	"github.com/HighStakesSwitzerland/tendermint/internals/consensus"
+	"github.com/HighStakesSwitzerland/tendermint/internals/evidence"
+	"github.com/HighStakesSwitzerland/tendermint/internals/mempool"
+	mempoolv0 "github.com/HighStakesSwitzerland/tendermint/internals/mempool/v0"
+	mempoolv1 "github.com/HighStakesSwitzerland/tendermint/internals/mempool/v1"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p/pex"
+	"github.com/HighStakesSwitzerland/tendermint/internals/proxy"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer/sink"
+	"github.com/HighStakesSwitzerland/tendermint/internals/statesync"
+	"github.com/HighStakesSwitzerland/tendermint/internals/store"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	tmstrings "github.com/HighStakesSwitzerland/tendermint/libs/strings"
+	protop2p "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/version"
 
 	_ "net/http/pprof" // nolint: gosec // securely exposed on separate, optional port
 )
@@ -714,7 +714,7 @@ func createPEXReactorAndAddToSwitch(addrBook pex.AddrBook, cfg *config.Config,
 		// blocks assuming 10s blocks ~ 28 hours.
 		// TODO (melekes): make it dynamic based on the actual block latencies
 		// from the live network.
-		// https://github.com/tendermint/tendermint/issues/3523
+		// https://github.com/HighStakesSwitzerland/tendermint/issues/3523
 		SeedDisconnectWaitPeriod:     28 * time.Hour,
 		PersistentPeersMaxDialPeriod: cfg.P2P.PersistentPeersMaxDialPeriod,
 	}

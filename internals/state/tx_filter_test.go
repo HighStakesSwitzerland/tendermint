@@ -6,9 +6,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	sm "github.com/tendermint/tendermint/internal/state"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	"github.com/tendermint/tendermint/types"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	tmrand "github.com/HighStakesSwitzerland/tendermint/libs/rand"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 func TestTxFilter(t *testing.T) {

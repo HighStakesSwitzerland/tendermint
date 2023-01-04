@@ -3,10 +3,10 @@ package types
 import (
 	"io/ioutil"
 
-	"github.com/tendermint/tendermint/crypto"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	tmos "github.com/tendermint/tendermint/libs/os"
+	"github.com/HighStakesSwitzerland/tendermint/crypto"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/ed25519"
+	tmjson "github.com/HighStakesSwitzerland/tendermint/libs/json"
+	tmos "github.com/HighStakesSwitzerland/tendermint/libs/os"
 )
 
 //------------------------------------------------------------------------------

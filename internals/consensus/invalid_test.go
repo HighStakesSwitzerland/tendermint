@@ -5,13 +5,13 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	"github.com/HighStakesSwitzerland/tendermint/libs/bytes"
+	tmrand "github.com/HighStakesSwitzerland/tendermint/libs/rand"
+	tmcons "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/consensus"
+	tmproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/internal/p2p"
-	"github.com/tendermint/tendermint/libs/bytes"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
 )
 
 func TestReactorInvalidPrecommit(t *testing.T) {

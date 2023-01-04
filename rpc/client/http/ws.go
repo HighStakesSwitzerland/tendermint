@@ -7,12 +7,12 @@ import (
 	"strings"
 	"time"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	tmjson "github.com/tendermint/tendermint/libs/json"
-	"github.com/tendermint/tendermint/libs/pubsub"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	jsonrpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	tmjson "github.com/HighStakesSwitzerland/tendermint/libs/json"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub"
+	rpcclient "github.com/HighStakesSwitzerland/tendermint/rpc/client"
+	"github.com/HighStakesSwitzerland/tendermint/rpc/coretypes"
+	jsonrpcclient "github.com/HighStakesSwitzerland/tendermint/rpc/jsonrpc/client"
 )
 
 // WSOptions for the WS part of the HTTP client.

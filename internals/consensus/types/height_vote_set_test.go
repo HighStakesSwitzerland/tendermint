@@ -6,13 +6,13 @@ import (
 	"os"
 	"testing"
 
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/crypto/tmhash"
-	"github.com/tendermint/tendermint/internal/test/factory"
-	tmrand "github.com/tendermint/tendermint/libs/rand"
-	tmtime "github.com/tendermint/tendermint/libs/time"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/crypto/tmhash"
+	"github.com/HighStakesSwitzerland/tendermint/internals/test/factory"
+	tmrand "github.com/HighStakesSwitzerland/tendermint/libs/rand"
+	tmtime "github.com/HighStakesSwitzerland/tendermint/libs/time"
+	tmproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 var cfg *config.Config // NOTE: must be reset for each _test.go file

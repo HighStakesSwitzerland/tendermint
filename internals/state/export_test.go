@@ -1,9 +1,9 @@
 package state
 
 import (
-	abci "github.com/tendermint/tendermint/abci/types"
-	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
-	"github.com/tendermint/tendermint/types"
+	abci "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	tmstate "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/state"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 //

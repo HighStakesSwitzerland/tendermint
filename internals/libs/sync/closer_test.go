@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
 	"github.com/stretchr/testify/require"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
 )
 
 func TestCloser(t *testing.T) {

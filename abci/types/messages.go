@@ -3,8 +3,8 @@ package types
 import (
 	"io"
 
+	"github.com/HighStakesSwitzerland/tendermint/internals/libs/protoio"
 	"github.com/gogo/protobuf/proto"
-	"github.com/tendermint/tendermint/internal/libs/protoio"
 )
 
 const (

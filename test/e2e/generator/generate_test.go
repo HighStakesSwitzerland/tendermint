@@ -5,9 +5,9 @@ import (
 	"math/rand"
 	"testing"
 
+	e2e "github.com/HighStakesSwitzerland/tendermint/test/e2e/pkg"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	e2e "github.com/tendermint/tendermint/test/e2e/pkg"
 )
 
 func TestGenerator(t *testing.T) {

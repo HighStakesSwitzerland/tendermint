@@ -4,10 +4,10 @@ import (
 	"strings"
 	"time"
 
+	cstypes "github.com/HighStakesSwitzerland/tendermint/internals/consensus/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	"github.com/go-kit/kit/metrics"
 	"github.com/go-kit/kit/metrics/discard"
-	cstypes "github.com/tendermint/tendermint/internal/consensus/types"
-	"github.com/tendermint/tendermint/types"
 
 	prometheus "github.com/go-kit/kit/metrics/prometheus"
 	stdprometheus "github.com/prometheus/client_golang/prometheus"

@@ -9,12 +9,12 @@ import (
 	"sync"
 	"time"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
-	tmmath "github.com/tendermint/tendermint/libs/math"
-	"github.com/tendermint/tendermint/light/provider"
-	"github.com/tendermint/tendermint/light/store"
-	"github.com/tendermint/tendermint/types"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	tmmath "github.com/HighStakesSwitzerland/tendermint/libs/math"
+	"github.com/HighStakesSwitzerland/tendermint/light/provider"
+	"github.com/HighStakesSwitzerland/tendermint/light/store"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 type mode byte
@@ -315,10 +315,10 @@ func (c *Client) initializeWithTrustOptions(ctx context.Context, options TrustOp
 // TrustedLightBlock returns a trusted light block at the given height (0 - the latest).
 //
 // It returns an error if:
-//  - there are some issues with the trusted store, although that should not
-//  happen normally;
-//  - negative height is passed;
-//  - header has not been verified yet and is therefore not in the store
+//   - there are some issues with the trusted store, although that should not
+//     happen normally;
+//   - negative height is passed;
+//   - header has not been verified yet and is therefore not in the store
 //
 // Safe for concurrent use by multiple goroutines.
 func (c *Client) TrustedLightBlock(height int64) (*types.LightBlock, error) {
@@ -428,12 +428,13 @@ func (c *Client) VerifyLightBlockAtHeight(ctx context.Context, height int64, now
 // headers are not adjacent, verifySkipping is performed and necessary (not all)
 // intermediate headers will be requested. See the specification for details.
 // Intermediate headers are not saved to database.
-// https://github.com/tendermint/tendermint/blob/v0.35.x/spec/consensus/light-client.md
+// https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/spec/consensus/light-client.md
 //
 // If the header, which is older than the currently trusted header, is
 // requested and the light client does not have it, VerifyHeader will perform:
-//		a) verifySkipping verification if nearest trusted header is found & not expired
-//		b) backwards verification in all other cases
+//
+//	a) verifySkipping verification if nearest trusted header is found & not expired
+//	b) backwards verification in all other cases
 //
 // It returns ErrOldHeaderExpired if the latest trusted header expired.
 //
@@ -914,12 +915,12 @@ func (c *Client) backwards(
 // lightBlockFromPrimary retrieves the lightBlock from the primary provider
 // at the specified height. This method also handles provider behavior as follows:
 //
-// 1. If the provider does not respond or does not have the block, it tries again
-//    with a different provider
-// 2. If all providers return the same error, the light client forwards the error to
-//    where the initial request came from
-// 3. If the provider provides an invalid light block, is deemed unreliable or returns
-//    any other error, the primary is permanently dropped and is replaced by a witness.
+//  1. If the provider does not respond or does not have the block, it tries again
+//     with a different provider
+//  2. If all providers return the same error, the light client forwards the error to
+//     where the initial request came from
+//  3. If the provider provides an invalid light block, is deemed unreliable or returns
+//     any other error, the primary is permanently dropped and is replaced by a witness.
 func (c *Client) lightBlockFromPrimary(ctx context.Context, height int64) (*types.LightBlock, error) {
 	c.providerMutex.Lock()
 	l, err := c.getLightBlock(ctx, c.primary, height)

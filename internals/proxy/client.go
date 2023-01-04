@@ -3,10 +3,10 @@ package proxy
 import (
 	"io"
 
-	abciclient "github.com/tendermint/tendermint/abci/client"
-	"github.com/tendermint/tendermint/abci/example/kvstore"
-	"github.com/tendermint/tendermint/abci/types"
-	e2e "github.com/tendermint/tendermint/test/e2e/app"
+	abciclient "github.com/HighStakesSwitzerland/tendermint/abci/client"
+	"github.com/HighStakesSwitzerland/tendermint/abci/example/kvstore"
+	"github.com/HighStakesSwitzerland/tendermint/abci/types"
+	e2e "github.com/HighStakesSwitzerland/tendermint/test/e2e/app"
 )
 
 // DefaultClientCreator returns a default ClientCreator, which will create a

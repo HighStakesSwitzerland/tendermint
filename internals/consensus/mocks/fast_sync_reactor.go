@@ -4,7 +4,7 @@ package mocks
 
 import (
 	mock "github.com/stretchr/testify/mock"
-	state "github.com/tendermint/tendermint/internal/state"
+	state "github.com/HighStakesSwitzerland/tendermint/internals/state"
 
 	time "time"
 )

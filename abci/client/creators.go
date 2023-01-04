@@ -3,8 +3,8 @@ package abciclient
 import (
 	"fmt"
 
-	"github.com/tendermint/tendermint/abci/types"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/abci/types"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
 )
 
 // Creator creates new ABCI clients.

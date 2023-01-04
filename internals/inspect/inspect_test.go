@@ -10,20 +10,20 @@ import (
 	"testing"
 	"time"
 
+	abcitypes "github.com/HighStakesSwitzerland/tendermint/abci/types"
+	"github.com/HighStakesSwitzerland/tendermint/config"
+	"github.com/HighStakesSwitzerland/tendermint/internals/inspect"
+	"github.com/HighStakesSwitzerland/tendermint/internals/state/indexer"
+	indexermocks "github.com/HighStakesSwitzerland/tendermint/internals/state/indexer/mocks"
+	statemocks "github.com/HighStakesSwitzerland/tendermint/internals/state/mocks"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/libs/pubsub/query"
+	"github.com/HighStakesSwitzerland/tendermint/proto/tendermint/state"
+	httpclient "github.com/HighStakesSwitzerland/tendermint/rpc/client/http"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	"github.com/fortytw2/leaktest"
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
-	abcitypes "github.com/tendermint/tendermint/abci/types"
-	"github.com/tendermint/tendermint/config"
-	"github.com/tendermint/tendermint/internal/inspect"
-	"github.com/tendermint/tendermint/internal/state/indexer"
-	indexermocks "github.com/tendermint/tendermint/internal/state/indexer/mocks"
-	statemocks "github.com/tendermint/tendermint/internal/state/mocks"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/pubsub/query"
-	"github.com/tendermint/tendermint/proto/tendermint/state"
-	httpclient "github.com/tendermint/tendermint/rpc/client/http"
-	"github.com/tendermint/tendermint/types"
 )
 
 func TestInspectConstructor(t *testing.T) {
@@ -259,7 +259,7 @@ func TestBlockResults(t *testing.T) {
 	testHeight := int64(1)
 	testGasUsed := int64(100)
 	stateStoreMock := &statemocks.Store{}
-	//	tmstate "github.com/tendermint/tendermint/proto/tendermint/state"
+	//	tmstate "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/state"
 	stateStoreMock.On("LoadABCIResponses", testHeight).Return(&state.ABCIResponses{
 		DeliverTxs: []*abcitypes.ResponseDeliverTx{
 			{

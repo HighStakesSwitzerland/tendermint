@@ -8,7 +8,7 @@ The RPC documentation is hosted here:
 
 - [https://docs.tendermint.com/master/rpc/](https://docs.tendermint.com/master/rpc/)
 
-To update the documentation, edit the relevant `godoc` comments in the [rpc directory](https://github.com/tendermint/tendermint/blob/v0.35.x/rpc).
+To update the documentation, edit the relevant `godoc` comments in the [rpc directory](https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/rpc).
 
 If you are using Tendermint in-process, you will need to set the version to be displayed in the RPC.
 
@@ -18,7 +18,7 @@ Example:
 
 ```
 VERSION := $(shell go list -m github.com/tendermint/tendermint | sed 's:.* ::')
-LD_FLAGS = -X github.com/tendermint/tendermint/version.TMCoreSemVer=$(VERSION)
+LD_FLAGS = -X github.com/HighStakesSwitzerland/tendermint/version.TMCoreSemVer=$(VERSION)
 
 install:
   @echo "Installing the brr machine"

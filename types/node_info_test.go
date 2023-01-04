@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/HighStakesSwitzerland/tendermint/crypto/ed25519"
+	tmnet "github.com/HighStakesSwitzerland/tendermint/libs/net"
+	"github.com/HighStakesSwitzerland/tendermint/version"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/crypto/ed25519"
-	tmnet "github.com/tendermint/tendermint/libs/net"
-	"github.com/tendermint/tendermint/version"
 )
 
 const testCh = 0x01

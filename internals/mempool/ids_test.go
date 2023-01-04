@@ -3,8 +3,8 @@ package mempool
 import (
 	"testing"
 
+	"github.com/HighStakesSwitzerland/tendermint/types"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/types"
 )
 
 func TestMempoolIDsBasic(t *testing.T) {

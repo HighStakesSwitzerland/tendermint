@@ -250,7 +250,7 @@ of v(i) and v(i+1) such that
 > - check that v(i+1)  differs from its block at that height, and
 > - verify v(i+1) in one step from v(i) as v is a verification trace.
 
-**Proposition.** In the case of attack, evidence exists.  
+**Proposition.** In the case of attack, evidence exists.
 *Proof.* First observe that
 
 - (A). (NOT E2(i)) implies E1(i+1)
@@ -283,7 +283,7 @@ operational.
 
 > They might be relevant for a closer analysis of fork scenarios on the
 > chain, which is out of the scope of this specification.
-  
+
 #### **[TMBC-SIGN-UNIQUE.1]**
 
 Let *b* and *c* be  light blocks, we define the predicate
@@ -335,7 +335,7 @@ Let *b* be a light block and *t* a time. We define *bogus(b,t)* iff
 
 - *sequ-rooted(b) = false* and
 - for all *a*, *sequ-rooted(a)* implies *skip-trace(a,b,t) = false*
-  
+
 ### Informal Problem statement
 
 There is no sequential specification: the detector only makes sense
@@ -391,7 +391,7 @@ agreed on in the past), and
 Whenever AttackDetector is called, the detector should for each
 secondary try to replay the verification trace `verifiedLS` with the
 secondary
-  
+
 - in case replaying leads to detection of a light client attack
   (one of the lightblocks differ from the one in verifiedLS with
   the same height), we should return evidence
@@ -426,7 +426,7 @@ node among the primary and the secondaries.
 > `root-of-trust` is always the one from the blockchain, and we can
 > use it as starting point for the evidence computation. Moreover, it
 > allows us to establish the invariant at the supervisor that any
-> lightblock in the (top-level) lightstore is from the blockchain.  
+> lightblock in the (top-level) lightstore is from the blockchain.
 > In the future we might design a lightclient based on the assumption
 > that at least in regular intervals the lightclient is connected to a
 > correct full node. This will require the detector to reconsider
@@ -606,7 +606,7 @@ a conflicting header is downloaded from a secondary,
 indeed an attack is confirmed. It could be that the secondary reports
 a bogus block, which means that there need not be an attack, and the
 secondary is replaced.
-  
+
 ## Details of the functions
 
 #### **[LCD-FUNC-DETECTOR.1]:**
@@ -675,7 +675,7 @@ func CreateEvidenceForPeer(peer PeerID, root LightBlock, trace LightStore)
 
     for i in 1 .. len(trace) {
         auxLS, result := VerifyToTarget(peer, common, trace[i].Header.Height)
-  
+
         if result != ResultSuccess {
             // something went wrong; peer did not provide a verifyable block
             return (nil, nil, nil, FaultyPeer)
@@ -766,23 +766,23 @@ Once a bogus block is recognized as such the secondary is removed.
 
 [[supervisor]] The specification of the light client supervisor.
 
-[verification]:  https://github.com/tendermint/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md
+[verification]:  https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md
 
-[supervisor]:  https://github.com/tendermint/tendermint/blob/v0.35.x/rust-spec/lightclient/supervisor/supervisor.md
+[supervisor]:  https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/rust-spec/lightclient/supervisor/supervisor.md
 
 [block]: https://github.com/tendermint/spec/blob/d46cd7f573a2c6a2399fcab2cde981330aa63f37/spec/core/data_structures.md
 
-[TMBC-FM-2THIRDS-link]: https://github.com/tendermint/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#tmbc-fm-2thirds1
+[TMBC-FM-2THIRDS-link]: https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#tmbc-fm-2thirds1
 
-[TMBC-SOUND-DISTR-POSS-COMMIT-link]: https://github.com/tendermint/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#tmbc-sound-distr-poss-commit1
+[TMBC-SOUND-DISTR-POSS-COMMIT-link]: https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#tmbc-sound-distr-poss-commit1
 
-[LCV-SEQ-SAFE-link]:https://github.com/tendermint/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#lcv-seq-safe1
+[LCV-SEQ-SAFE-link]:https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#lcv-seq-safe1
 
 [TMBC-VAL-CONTAINS-CORR-link]:
-https://github.com/tendermint/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#tmbc-val-contains-corr1
+https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#tmbc-val-contains-corr1
 
 [fetch]:
-https://github.com/tendermint/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#lcv-func-fetch1
+https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#lcv-func-fetch1
 
 [LCV-INV-TP1-link]:
-https://github.com/tendermint/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#lcv-inv-tp1
+https://github.com/HighStakesSwitzerland/tendermint/blob/v0.35.x/rust-spec/lightclient/verification/verification.md#lcv-inv-tp1

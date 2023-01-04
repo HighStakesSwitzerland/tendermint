@@ -4,8 +4,8 @@ package events
 import (
 	"fmt"
 
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/service"
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
 )
 
 // ErrListenerWasRemoved is returned by AddEvent if the listener was removed.

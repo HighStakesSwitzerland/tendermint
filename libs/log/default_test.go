@@ -3,8 +3,8 @@ package log_test
 import (
 	"testing"
 
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/libs/log"
 )
 
 func TestNewDefaultLogger(t *testing.T) {

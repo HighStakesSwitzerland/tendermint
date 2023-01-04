@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 // ErrFilterTimeout indicates that a filter operation timed out.

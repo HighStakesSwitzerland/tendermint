@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/HighStakesSwitzerland/tendermint/test/fuzz/rpc/jsonrpc/server"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/test/fuzz/rpc/jsonrpc/server"
 )
 
 const testdataCasesDir = "testdata/cases"

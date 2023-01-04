@@ -6,16 +6,16 @@ import (
 	"sync"
 	"time"
 
-	cstypes "github.com/tendermint/tendermint/internal/consensus/types"
-	"github.com/tendermint/tendermint/internal/p2p"
-	sm "github.com/tendermint/tendermint/internal/state"
-	"github.com/tendermint/tendermint/libs/bits"
-	tmevents "github.com/tendermint/tendermint/libs/events"
-	"github.com/tendermint/tendermint/libs/log"
-	"github.com/tendermint/tendermint/libs/service"
-	tmcons "github.com/tendermint/tendermint/proto/tendermint/consensus"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
+	cstypes "github.com/HighStakesSwitzerland/tendermint/internals/consensus/types"
+	"github.com/HighStakesSwitzerland/tendermint/internals/p2p"
+	sm "github.com/HighStakesSwitzerland/tendermint/internals/state"
+	"github.com/HighStakesSwitzerland/tendermint/libs/bits"
+	tmevents "github.com/HighStakesSwitzerland/tendermint/libs/events"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
+	"github.com/HighStakesSwitzerland/tendermint/libs/service"
+	tmcons "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/consensus"
+	tmproto "github.com/HighStakesSwitzerland/tendermint/proto/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 var (
@@ -28,7 +28,7 @@ var (
 	//
 	//
 	// TODO: Remove once p2p refactor is complete.
-	// ref: https://github.com/tendermint/tendermint/issues/5670
+	// ref: https://github.com/HighStakesSwitzerland/tendermint/issues/5670
 	ChannelShims = map[p2p.ChannelID]*p2p.ChannelDescriptorShim{
 		StateChannel: {
 			MsgType: new(tmcons.Message),
@@ -97,7 +97,7 @@ const (
 type ReactorOption func(*Reactor)
 
 // NOTE: Temporary interface for switching to block sync, we should get rid of v0.
-// See: https://github.com/tendermint/tendermint/issues/4595
+// See: https://github.com/HighStakesSwitzerland/tendermint/issues/4595
 type BlockSyncReactor interface {
 	SwitchToBlockSync(sm.State) error
 
@@ -112,8 +112,9 @@ type BlockSyncReactor interface {
 	GetRemainingSyncTime() time.Duration
 }
 
-//go:generate ../../scripts/mockery_generate.sh ConsSyncReactor
 // ConsSyncReactor defines an interface used for testing abilities of node.startStateSync.
+//
+//go:generate ../../scripts/mockery_generate.sh ConsSyncReactor
 type ConsSyncReactor interface {
 	SwitchToConsensus(sm.State, bool)
 	SetStateSyncingMetrics(float64)

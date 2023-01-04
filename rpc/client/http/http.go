@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/tendermint/tendermint/libs/bytes"
-	rpcclient "github.com/tendermint/tendermint/rpc/client"
-	"github.com/tendermint/tendermint/rpc/coretypes"
-	jsonrpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
-	"github.com/tendermint/tendermint/types"
+	"github.com/HighStakesSwitzerland/tendermint/libs/bytes"
+	rpcclient "github.com/HighStakesSwitzerland/tendermint/rpc/client"
+	"github.com/HighStakesSwitzerland/tendermint/rpc/coretypes"
+	jsonrpcclient "github.com/HighStakesSwitzerland/tendermint/rpc/jsonrpc/client"
+	"github.com/HighStakesSwitzerland/tendermint/types"
 )
 
 /*
@@ -32,24 +32,24 @@ the example for more details.
 
 Example:
 
-		c, err := New("http://192.168.1.10:26657")
-		if err != nil {
-			// handle error
-		}
+	c, err := New("http://192.168.1.10:26657")
+	if err != nil {
+		// handle error
+	}
 
-		// call Start/Stop if you're subscribing to events
-		err = c.Start()
-		if err != nil {
-			// handle error
-		}
-		defer c.Stop()
+	// call Start/Stop if you're subscribing to events
+	err = c.Start()
+	if err != nil {
+		// handle error
+	}
+	defer c.Stop()
 
-		res, err := c.Status()
-		if err != nil {
-			// handle error
-		}
+	res, err := c.Status()
+	if err != nil {
+		// handle error
+	}
 
-		// handle result
+	// handle result
 */
 type HTTP struct {
 	remote string

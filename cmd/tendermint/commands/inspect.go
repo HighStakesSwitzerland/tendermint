@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tendermint/tendermint/internal/inspect"
+	"github.com/HighStakesSwitzerland/tendermint/internals/inspect"
 )
 
 // InspectCmd is the command for starting an inspect server.
@@ -20,7 +20,7 @@ var InspectCmd = &cobra.Command{
 	issues with Tendermint.
 
 	When the Tendermint consensus engine detects inconsistent state, it will crash the
-	tendermint process. Tendermint will not start up while in this inconsistent state. 
+	tendermint process. Tendermint will not start up while in this inconsistent state.
 	The inspect command can be used to query the block and state store using Tendermint
 	RPC calls to debug issues of inconsistent state.
 	`,

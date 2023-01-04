@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"time"
 
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
 	"github.com/gogo/protobuf/proto"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
 )
 
 // pqEnvelope defines a wrapper around an Envelope with priority to be inserted

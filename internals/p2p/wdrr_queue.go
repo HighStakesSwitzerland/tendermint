@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strconv"
 
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
 	"github.com/gogo/protobuf/proto"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
 )
 
 // wrappedEnvelope wraps a p2p Envelope with its precomputed size.
@@ -27,13 +27,13 @@ var _ queue = (*wdrrScheduler)(nil)
 // The WDRR scheduler contains a shared buffer with a fixed capacity.
 //
 // Each flow has the following:
-// - quantum: The number of bytes that is added to the deficit counter of the
-//   flow in each round. The flow can send at most quantum bytes at a time. Each
-//   flow has its own unique quantum, which gives the queue its weighted nature.
-//   A higher quantum corresponds to a higher weight/priority. The quantum is
-//   computed as MaxSendBytes * Priority.
-// - deficit counter: The number of bytes that the flow is allowed to transmit
-//   when it is its turn.
+//   - quantum: The number of bytes that is added to the deficit counter of the
+//     flow in each round. The flow can send at most quantum bytes at a time. Each
+//     flow has its own unique quantum, which gives the queue its weighted nature.
+//     A higher quantum corresponds to a higher weight/priority. The quantum is
+//     computed as MaxSendBytes * Priority.
+//   - deficit counter: The number of bytes that the flow is allowed to transmit
+//     when it is its turn.
 //
 // See: https://en.wikipedia.org/wiki/Deficit_round_robin
 type wdrrScheduler struct {

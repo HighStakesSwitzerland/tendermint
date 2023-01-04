@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
+	tmsync "github.com/HighStakesSwitzerland/tendermint/internals/libs/sync"
+	"github.com/HighStakesSwitzerland/tendermint/libs/log"
 	gogotypes "github.com/gogo/protobuf/types"
 	"github.com/stretchr/testify/require"
-	tmsync "github.com/tendermint/tendermint/internal/libs/sync"
-	"github.com/tendermint/tendermint/libs/log"
 )
 
 type testMessage = gogotypes.StringValue

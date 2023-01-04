@@ -10,14 +10,14 @@ main Tendermint project, the following process leads to the best chance of
 landing changes in master.
 
 All work on the code base should be motivated by a [Github
-Issue](https://github.com/tendermint/tendermint/issues).
-[Search](https://github.com/tendermint/tendermint/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
+Issue](https://github.com/HighStakesSwitzerland/tendermint/issues).
+[Search](https://github.com/HighStakesSwitzerland/tendermint/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22)
 is a good place start when looking for places to contribute. If you
 would like to work on an issue which already exists, please indicate so
 by leaving a comment.
 
 All new contributions should start with a [Github
-Issue](https://github.com/tendermint/tendermint/issues/new/choose). The
+Issue](https://github.com/HighStakesSwitzerland/tendermint/issues/new/choose). The
 issue helps capture the problem you're trying to solve and allows for
 early feedback. Once the issue is created the process can proceed in different
 directions depending on how well defined the problem and potential
@@ -26,7 +26,7 @@ will indicate their support with a heartfelt emoji.
 
 If the issue would benefit from thorough discussion, maintainers may
 request that you create a [Request For
-Comment](https://github.com/tendermint/tendermint/tree/master/docs/rfc)
+Comment](https://github.com/HighStakesSwitzerland/tendermint/tree/master/docs/rfc)
 in the Tendermint spec repo. Discussion
 at the RFC stage will build collective understanding of the dimensions
 of the problems and help structure conversations around trade-offs.
@@ -266,7 +266,7 @@ the 0.35.x line.
 3. Go back to master and tag it as the dev branch for the _next_ major release and push it back up:
    `git tag -a v0.36.0-dev; git push v0.36.0-dev`
 4. Create a new workflow to run the e2e nightlies for this backport branch.
-   (See https://github.com/tendermint/tendermint/blob/master/.github/workflows/e2e-nightly-34x.yml
+   (See https://github.com/HighStakesSwitzerland/tendermint/blob/master/.github/workflows/e2e-nightly-34x.yml
    for an example.)
 
 #### Release candidates
@@ -287,7 +287,7 @@ Otherwise:
 1. Start from the backport branch (e.g. `v0.35.x`).
 1. Run the integration tests and the e2e nightlies
    (which can be triggered from the Github UI;
-   e.g., https://github.com/tendermint/tendermint/actions/workflows/e2e-nightly-34x.yml).
+   e.g., https://github.com/HighStakesSwitzerland/tendermint/actions/workflows/e2e-nightly-34x.yml).
 1. Prepare the changelog:
    - Move the changes included in `CHANGELOG_PENDING.md` into `CHANGELOG.md`.
    - Run `python ./scripts/linkify_changelog.py CHANGELOG.md` to add links for
