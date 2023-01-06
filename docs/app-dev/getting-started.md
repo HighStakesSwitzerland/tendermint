@@ -32,8 +32,8 @@ echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
 Then run
 
 ```sh
-go get github.com/HighStakesSwitzerland/tendermint
-cd $GOPATH/src/github.com/HighStakesSwitzerland/tendermint
+go get github.com/tendermint/tendermint
+cd $GOPATH/src/github.com/tendermint/tendermint
 make install_abci
 ```
 

@@ -10,8 +10,8 @@ func BenchmarkAddrBook_hash(b *testing.B) {
 	book := &addrBook{
 		ourAddrs:          make(map[string]struct{}),
 		privateIDs:        make(map[types.NodeID]struct{}),
-		addrLookup:        make(map[types.NodeID]*knownAddress),
-		badPeers:          make(map[types.NodeID]*knownAddress),
+		addrLookup:        make(map[types.NodeID]*KnownAddress),
+		badPeers:          make(map[types.NodeID]*KnownAddress),
 		filePath:          "",
 		routabilityStrict: true,
 	}

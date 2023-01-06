@@ -13,7 +13,7 @@ endif
 
 LD_FLAGS = -X github.com/HighStakesSwitzerland/tendermint/version.TMVersion=$(VERSION)
 BUILD_FLAGS = -mod=readonly -ldflags "$(LD_FLAGS)"
-HTTPS_GIT := https://github.com/HighStakesSwitzerland/tendermint.git
+HTTPS_GIT := https://github.com/tendermint/tendermint.git
 BUILD_IMAGE := ghcr.io/tendermint/docker-build-proto
 BASE_BRANCH := v0.35.x
 DOCKER_PROTO := docker run -v $(shell pwd):/workspace --workdir /workspace $(BUILD_IMAGE)
@@ -213,7 +213,7 @@ clean_certs:
 
 format:
 	find . -name '*.go' -type f -not -path "*.git*" -not -name '*.pb.go' -not -name '*pb_test.go' | xargs gofmt -w -s
-	find . -name '*.go' -type f -not -path "*.git*"  -not -name '*.pb.go' -not -name '*pb_test.go' | xargs goimports -w -local github.com/HighStakesSwitzerland/tendermint
+	find . -name '*.go' -type f -not -path "*.git*"  -not -name '*.pb.go' -not -name '*pb_test.go' | xargs goimports -w -local github.com/tendermint/tendermint
 .PHONY: format
 
 lint:

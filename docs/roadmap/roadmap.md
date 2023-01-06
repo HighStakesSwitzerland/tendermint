@@ -8,7 +8,7 @@ order: 1
 
 This document endeavours to inform the wider Tendermint community about development plans and priorities for Tendermint Core, and when we expect features to be delivered. It is intended to broadly inform all users of Tendermint, including application developers, node operators, integrators, and the engineering and research teams.
 
-Anyone wishing to propose work to be a part of this roadmap should do so by opening an [issue](https://github.com/HighStakesSwitzerland/tendermint/issues/new/choose) in the spec. Bug reports and other implementation concerns should be brought up in the [core repository](https://github.com/HighStakesSwitzerland/tendermint).
+Anyone wishing to propose work to be a part of this roadmap should do so by opening an [issue](https://github.com/HighStakesSwitzerland/tendermint/issues/new/choose) in the spec. Bug reports and other implementation concerns should be brought up in the [core repository](https://github.com/tendermint/tendermint).
 
 This roadmap should be read as a high-level guide to plans and priorities, rather than a commitment to schedules and deliverables. Features earlier on the roadmap will generally be more specific and detailed than those later on. We will update this document periodically to reflect the current status.
 

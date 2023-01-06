@@ -20,7 +20,7 @@ git clean -fdx
 
 # Versions prior to v0.32 do not have Go module files.
 # Those that do may need some dependencies manually updated.
-go mod init github.com/HighStakesSwitzerland/tendermint
+go mod init github.com/tendermint/tendermint
 go mod tidy
 go get golang.org/x/sys
 

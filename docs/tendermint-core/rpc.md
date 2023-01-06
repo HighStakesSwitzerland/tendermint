@@ -17,7 +17,7 @@ If you are using a makefile with your go project, this can be done by using sed 
 Example:
 
 ```
-VERSION := $(shell go list -m github.com/HighStakesSwitzerland/tendermint | sed 's:.* ::')
+VERSION := $(shell go list -m github.com/tendermint/tendermint | sed 's:.* ::')
 LD_FLAGS = -X github.com/HighStakesSwitzerland/tendermint/version.TMCoreSemVer=$(VERSION)
 
 install:

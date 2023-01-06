@@ -570,7 +570,7 @@ Let's install the latest release version of the Tendermint library.
 From inside of the project directory, run:
 
 ```sh
-go get github.com/HighStakesSwitzerland/tendermint@v0.35.0
+go get github.com/tendermint/tendermint@v0.35.0
 ```
 
 Next, we'll need to populate the Tendermint Core configuration files.

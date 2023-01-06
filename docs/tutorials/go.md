@@ -438,7 +438,7 @@ This should create a `go.mod` file. The current tutorial only works with
 the master branch of Tendermint, so let's make sure we're using the latest version:
 
 ```sh
-go get github.com/HighStakesSwitzerland/tendermint@97a3e44e0724f2017079ce24d36433f03124c09e
+go get github.com/tendermint/tendermint@97a3e44e0724f2017079ce24d36433f03124c09e
 ```
 
 This will populate the `go.mod` with a release number followed by a hash for Tendermint.
@@ -450,7 +450,7 @@ go 1.16
 
 require (
  github.com/dgraph-io/badger v1.6.2
- github.com/HighStakesSwitzerland/tendermint <vX>
+ github.com/tendermint/tendermint <vX>
 )
 ```
 

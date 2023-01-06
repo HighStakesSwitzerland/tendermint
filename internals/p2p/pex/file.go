@@ -12,7 +12,7 @@ import (
 
 type addrBookJSON struct {
 	Key   string          `json:"key"`
-	Addrs []*knownAddress `json:"addrs"`
+	Addrs []*KnownAddress `json:"addrs"`
 }
 
 func (a *addrBook) saveToFile(filePath string) {
@@ -21,7 +21,7 @@ func (a *addrBook) saveToFile(filePath string) {
 
 	a.Logger.Info("Saving AddrBook to file", "size", a.size())
 
-	addrs := make([]*knownAddress, 0, len(a.addrLookup))
+	addrs := make([]*KnownAddress, 0, len(a.addrLookup))
 	for _, ka := range a.addrLookup {
 		addrs = append(addrs, ka)
 	}
