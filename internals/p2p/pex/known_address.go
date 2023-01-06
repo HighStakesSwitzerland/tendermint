@@ -19,6 +19,7 @@ type KnownAddress struct {
 	LastSuccess time.Time       `json:"last_success"`
 	LastBanTime time.Time       `json:"last_ban_time"`
 	// our own stuff
+	Moniker string  `json:"moniker"`
 	Country string  `json:"country"`
 	Region  string  `json:"region"`
 	City    string  `json:"city"`
