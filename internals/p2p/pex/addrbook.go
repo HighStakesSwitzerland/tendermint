@@ -257,7 +257,8 @@ func (a *addrBook) HasAddress(addr *p2p.NetAddress) bool {
 
 // NeedMoreAddrs implements AddrBook - returns true if there are not have enough addresses in the book.
 func (a *addrBook) NeedMoreAddrs() bool {
-	return a.Size() < needAddressThreshold
+	return true // a.Size() < needAddressThreshold
+	// always return true to ask every peer we find for more peers
 }
 
 // Empty implements AddrBook - returns true if there are no addresses in the address book.
@@ -349,6 +350,9 @@ func (a *addrBook) MarkAttempt(addr *p2p.NetAddress) {
 		return
 	}
 	ka.markAttempt()
+	if ka.Attempts > 5 { // unreachable peers were never removed! leading to address book containing things like "attempts": 2787,
+		a.removeFromAllBuckets(ka) // remove this peer forever
+	}
 }
 
 // MarkBad implements AddrBook. Kicks address out from book, places

@@ -346,7 +346,7 @@ func (r *Reactor) RequestAddrs(p Peer) {
 	if _, exists := r.requestsSent.GetOrSet(id, struct{}{}); exists {
 		return
 	}
-	r.Logger.Debug("Request addrs", "from", p)
+	r.Logger.Info("Request addrs", "from", p)
 	p.Send(PexChannel, mustEncode(&tmp2p.PexRequest{}))
 }
 
